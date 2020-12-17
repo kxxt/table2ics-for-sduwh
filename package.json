@@ -1,0 +1,24 @@
+{
+  "name": "table2ics-for-sduwh",
+  "version": "1.0.0",
+  "description": "Excel Table to ics file converter for sduwh students",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "tsc --watch"
+  },
+  "keywords": [
+    "ics",
+    "sduwh"
+  ],
+  "author": "kxxt",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "ics": "^2.26.2",
+    "xlsx": "^0.16.9"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.14"
+  }
+}
