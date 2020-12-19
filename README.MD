@@ -4,13 +4,13 @@
 
 (也是我的第一个Typescript/Javascript项目)
 
-代码可能比较烂 , 请dalao们谅解 :smile
+代码可能比较烂 , 请dalao们谅解 :joy:
 
 ## 使用说明
 
 ### 环境配置
 
-```shell
+```bash
 git clone https://github.com/kxxt/table2ics-for-sduwh.git
 cd table2ics-for-sduwh
 npm install
@@ -30,7 +30,7 @@ npm install
 
 ### 生成ICS文件
 
-```shell
+```bash
 npm run build
 npm run exec
 ```
@@ -44,3 +44,5 @@ npm run exec
 ## 其他SDUWH相关项目
 
 自动疫情打卡 : https://github.com/kxxt/pyautoclockin
+
+如果这个项目对你有用, 别忘了给个Star:star:哦! :smile:
