@@ -37,7 +37,24 @@ export function processSingleData(raw: string, weekday: number, course: number) 
     let processed: any[] = []
     let added: any[] = [];
     for (let k = 0; k < cnt; k++) {
-        let repeat = parseRepeat(splited[3+5*k].replace('[周]', ''), weekday)
+        let raw_repeat = splited[3+5*k]
+        let even_r = raw_repeat.indexOf('双周')
+        let odd_r = raw_repeat.indexOf('单周')
+        if(even_r!=-1||odd_r!=-1){
+            let mod = even_r!=-1?0:1
+            let start_end= raw_repeat.split('-')
+            let start = parseInt(start_end[0])
+            let end = parseInt(start_end[1])
+            raw_repeat = ''
+            for(let i=start;i<=end;i++){
+                if(i%2==mod){
+                    raw_repeat += i.toString()+','
+                }
+            }
+            raw_repeat=raw_repeat.slice(0,raw_repeat.length-1)
+            raw_repeat+='[周]'
+        }
+        let repeat = parseRepeat(raw_repeat.replace('[周]', ''), weekday)
         let is_multi = false;
         let pps = []
         if (typeof (repeat[2]) == 'object') {
